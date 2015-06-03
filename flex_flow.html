@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Flow</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+            flex-flow: row-reverse wrap;
+        }
+        .flex-child {
+            width: 500px;
+            height: 100px;
+            background-color: lightseagreen;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .trad-container {
+            display: block;
+            border: 1px solid silver;
+            height: 200px;
+        }
+        .trad-child {
+            width: 500px;
+            height: 100px;
+            background-color: indianred;
+            text-align: center;
+            line-height: 100px;
+
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Flow</h1>
+    <p>This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.</p>
+    <pre>.flex-container { flex-flow: row-reverse wrap } </pre>
+    <div class="flex-container">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <h1>Traditional Way</h1>
+    <pre>.flex-container { height: 200px }
+.flex-child { float: right }</pre>
+    <div class="trad-container">
+        <div class="trad-child">Box1</div>
+        <div class="trad-child">Box2</div>
+        <div class="trad-child">Box3</div>
+        <div class="trad-child">Box4</div>
+    </div>
+</body>
+</html>

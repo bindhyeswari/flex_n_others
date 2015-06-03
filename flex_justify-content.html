@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Justify-content</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+        }
+
+        .flex-default {
+            justify-content: flex-start;
+        }
+        .flex-end {
+            justify-content: flex-end;
+        }
+        .flex-center {
+            justify-content: center;
+        }
+        .flex-between {
+            justify-content: space-between;
+        }
+        .flex-around {
+            justify-content: space-around;
+        }
+
+        .flex-child {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .trad-container {
+            display: block;
+            border: 1px solid silver;
+            height: 100px;
+        }
+        .trad-child {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: indianred;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+        }
+        .child-container {
+            width: 400px;
+        }
+
+        .trad-right {
+            float: right;
+        }
+
+        .trad-center {
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex Justify-content</h1>
+    <pre>.flex-container { justify-content: flex-start }</pre>
+    <div class="flex-container flex-default">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <pre>.flex-container { justify-content: flex-end }</pre>
+    <div class="flex-container flex-end">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <pre>.flex-container { justify-content: center }</pre>
+    <div class="flex-container flex-center">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <pre>.flex-container { justify-content: space-between }</pre>
+    <div class="flex-container flex-between">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <pre>.flex-container { justify-content: space-around }</pre>
+    <div class="flex-container flex-around">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <h1>Traditional Way</h1>
+    <h3>compare with </h3>
+    <div class="trad-container">
+        <div class="child-container">
+            <div class="trad-child">Box1</div>
+            <div class="trad-child">Box2</div>
+            <div class="trad-child">Box3</div>
+            <div class="trad-child">Box4</div>
+        </div>
+    </div>
+
+    <div class="trad-container">
+        <div class="child-container trad-right">
+            <div class="trad-child">Box1</div>
+            <div class="trad-child">Box2</div>
+            <div class="trad-child">Box3</div>
+            <div class="trad-child">Box4</div>
+        </div>
+    </div>
+
+    <div class="trad-container">
+        <div class="child-container trad-center">
+            <div class="trad-child">Box1</div>
+            <div class="trad-child">Box2</div>
+            <div class="trad-child">Box3</div>
+            <div class="trad-child">Box4</div>
+        </div>
+    </div>
+</body>
+</html>

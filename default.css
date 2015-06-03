@@ -1,0 +1,21 @@
+* {
+    font-family: Helvetica, sans-serif;
+    color: #262626;
+}
+pre {
+    color: white;
+    background-color: #262626;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 4px;
+    width: 50%;
+}
+
+h1:last-of-type {
+    margin-top: 70px;
+}
+
+.flex-container,
+.trad-container {
+    margin-bottom: 40px;
+}

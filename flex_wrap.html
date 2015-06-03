@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Wrap</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            /*flex-wrap: nowrap;*/
+            flex-wrap: wrap;
+            /*flex-wrap: wrap-reverse;*/
+            border: 1px solid silver;
+        }
+        .flex-child {
+            width: 500px;
+            height: 100px;
+            background-color: lightseagreen;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .trad-container {
+            display: block;
+            border: 1px solid silver;
+            height: 200px;
+        }
+        .trad-child {
+            width: 500px;
+            height: 100px;
+            background-color: indianred;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Warp</h1>
+    <p>By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. Direction also plays a role here, determining the direction new lines are stacked in.</p>
+    <pre>.flex-container { flex-wrap: nowrap | wrap | wrap-reverse; }</pre>
+    <div class="flex-container">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+    <h1>Traditional Warp</h1>
+    <p>Specify container height and use "float" in container's children</p>
+    <pre>.trad-container { height: 200px; }
+.trad-child { float: left } </pre>
+    <div class="trad-container">
+        <div class="trad-child">Box1</div>
+        <div class="trad-child">Box2</div>
+        <div class="trad-child">Box3</div>
+        <div class="trad-child">Box4</div>
+    </div>
+</body>
+</html>

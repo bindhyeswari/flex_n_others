@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Basic Display</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            /*display: inline-flex;*/
+            border: 1px solid silver;
+        }
+        .flex-child {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .trad-container {
+            display: block;
+            border: 1px solid silver;
+        }
+        .trad-child {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: indianred;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Display Container</h1>
+    <pre>.flex-container { display: flex }</pre>
+    <div class="flex-container">
+        <div class="flex-child">box1</div>
+        <div class="flex-child">box2</div>
+        <div class="flex-child">box3</div>
+        <div class="flex-child">box4</div>
+    </div>
+    <h1>Traditional Display Container</h1>
+    <pre>.trad-container { display: block }
+.trad-child { display: inline-block; }</pre>
+    <div class="trad-container">
+        <div class="trad-child">box1</div>
+        <div class="trad-child">box2</div>
+        <div class="trad-child">box3</div>
+        <div class="trad-child">box4</div>
+    </div>
+</body>
+</html>
