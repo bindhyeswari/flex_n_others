@@ -48,51 +48,80 @@
             line-height: 100px;
             float: left;
         }
-        .child-container {
+        .trad-child-container {
             width: 400px;
         }
 
         .trad-right {
             float: right;
         }
-
         .trad-center {
             margin: 0 auto;
         }
+        .trad-between {
+            width: 25%;
+            float: left;
+        }
+        .trad-between-child {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: indianred;
+            text-align: center;
+            line-height: 100px;
+            margin-right: 200px;
+        }
+
+        .trad-space {
+            display: inline-block;
+            width: 25%;
+            float: left;
+        }
+
+        .trad-space-child {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: indianred;
+            text-align: center;
+            line-height: 100px;
+            margin: 0 auto;
+        }
+
 
     </style>
 </head>
 <body>
     <h1>Flex Justify-content</h1>
-    <pre>.flex-container { justify-content: flex-start }</pre>
+    <pre>.flex-container { justify-content: flex-start; }</pre>
     <div class="flex-container flex-default">
         <div class="flex-child">Box1</div>
         <div class="flex-child">Box2</div>
         <div class="flex-child">Box3</div>
         <div class="flex-child">Box4</div>
     </div>
-    <pre>.flex-container { justify-content: flex-end }</pre>
+    <pre>.flex-container { justify-content: flex-end; }</pre>
     <div class="flex-container flex-end">
         <div class="flex-child">Box1</div>
         <div class="flex-child">Box2</div>
         <div class="flex-child">Box3</div>
         <div class="flex-child">Box4</div>
     </div>
-    <pre>.flex-container { justify-content: center }</pre>
+    <pre>.flex-container { justify-content: center; }</pre>
     <div class="flex-container flex-center">
         <div class="flex-child">Box1</div>
         <div class="flex-child">Box2</div>
         <div class="flex-child">Box3</div>
         <div class="flex-child">Box4</div>
     </div>
-    <pre>.flex-container { justify-content: space-between }</pre>
+    <pre>.flex-container { justify-content: space-between; }</pre>
     <div class="flex-container flex-between">
         <div class="flex-child">Box1</div>
         <div class="flex-child">Box2</div>
         <div class="flex-child">Box3</div>
         <div class="flex-child">Box4</div>
     </div>
-    <pre>.flex-container { justify-content: space-around }</pre>
+    <pre>.flex-container { justify-content: space-around; }</pre>
     <div class="flex-container flex-around">
         <div class="flex-child">Box1</div>
         <div class="flex-child">Box2</div>
@@ -100,7 +129,7 @@
         <div class="flex-child">Box4</div>
     </div>
     <h1>Traditional Way</h1>
-    <h3>compare with </h3>
+    <p>Default positioning</p>
     <div class="trad-container">
         <div class="child-container">
             <div class="trad-child">Box1</div>
@@ -110,8 +139,10 @@
         </div>
     </div>
 
+    <pre>.trad-child-container { float: right; } </pre>
+    <p>To make a new div to container all child divs</p>
     <div class="trad-container">
-        <div class="child-container trad-right">
+        <div class="trad-child-container trad-right">
             <div class="trad-child">Box1</div>
             <div class="trad-child">Box2</div>
             <div class="trad-child">Box3</div>
@@ -119,12 +150,49 @@
         </div>
     </div>
 
+    <pre>.trad-child-container { margin: 0 auto; }</pre>
+    <p>To make a new div to align center for all child divs</p>
     <div class="trad-container">
-        <div class="child-container trad-center">
+        <div class="trad-child-container trad-center">
             <div class="trad-child">Box1</div>
             <div class="trad-child">Box2</div>
             <div class="trad-child">Box3</div>
             <div class="trad-child">Box4</div>
+        </div>
+    </div>
+
+    <pre>.trad-between { display: inline-block; width: 25%; float: left; }</pre>
+    <p>To make new divs to contain each child div</p>
+    <div class="trad-container">
+        <div class="trad-between">
+            <div class="trad-between-child">Box1</div>
+        </div>
+        <div class="trad-between">
+            <div class="trad-between-child">Box2</div>
+        </div>
+        <div class="trad-between">
+            <div class="trad-between-child">Box3</div>
+        </div>
+        <div class="trad-between">
+            <div class="trad-between-child">Box4</div>
+        </div>
+    </div>
+
+    <pre>.trad-space { display: inline-block; width: 25%; float: left; }
+.trad-space-child { display: block; margin: 0 auto; }</pre>
+    <p>To make new divs to contain each child div and each child has properties block and margin auto in order to align center</p>
+    <div class="trad-container">
+        <div class="trad-space">
+            <div class="trad-space-child">Box1</div>
+        </div>
+        <div class="trad-space">
+            <div class="trad-space-child">Box2</div>
+        </div>
+        <div class="trad-space">
+            <div class="trad-space-child">Box3</div>
+        </div>
+        <div class="trad-space">
+            <div class="trad-space-child">Box4</div>
         </div>
     </div>
 </body>

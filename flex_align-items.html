@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Align-items</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+            height: 300px;
+        }
+        .stretch {
+            align-items: stretch;
+        }
+        .start {
+            align-items: flex-start;
+        }
+        .end {
+            align-items: flex-end;
+        }
+        .center {
+            align-items: center;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+        .size1 {
+            font-size: 1.0em;
+        }
+        .size2 {
+            font-size: 1.2em;
+        }
+        .size3 {
+            font-size: 1.5em;
+        }
+        .size4 {
+            font-size: 2.0em;
+        }
+
+        .flex-child {
+            width: 100px;
+            background-color: lightseagreen;
+            text-align: center;
+        }
+
+        .trad-container {
+            display: block;
+            border: 1px solid silver;
+            height: 300px;
+        }
+
+        .trad-child {
+            display: inline-block;
+            width: 100px;
+            background-color: indianred;
+            text-align: center;
+        }
+        .trad-height {
+            height: 100%;
+        }
+        .trad-valign-top {
+            vertical-align: top;
+        }
+        .trad-valign-bottom {
+            vertical-align: bottom;
+        }
+        .trad-valign-middle {
+            vertical-align: middle;
+        }
+        .bottom {
+            position: relative;
+            top: 100%;
+            transform: translateY(-100%);
+        }
+        .middle {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex Align-items</h1>
+    <pre>.flex-container { align-items: stretch; }</pre>
+    <p>(default): stretch to fill the container (still respect min-width/max-width)</p>
+    <div class="flex-container stretch">
+        <div class="flex-child size1">Box1</div>
+        <div class="flex-child size2">Box2</div>
+        <div class="flex-child size3">Box3</div>
+        <div class="flex-child size4">Box4</div>
+    </div>
+
+    <pre>.flex-container { align-items: flex-start; }</pre>
+    <p>cross-start margin edge of the items is placed on the cross-start line</p>
+    <div class="flex-container start">
+        <div class="flex-child size1">Box1</div>
+        <div class="flex-child size2">Box2</div>
+        <div class="flex-child size3">Box3</div>
+        <div class="flex-child size4">Box4</div>
+    </div>
+
+    <pre>.flex-container { align-items: flex-end; }</pre>
+    <p>cross-end margin edge of the items is placed on the cross-end line</p>
+    <div class="flex-container end">
+        <div class="flex-child size1">Box1</div>
+        <div class="flex-child size2">Box2</div>
+        <div class="flex-child size3">Box3</div>
+        <div class="flex-child size4">Box4</div>
+    </div>
+
+    <pre>.flex-container { align-items: center; }</pre>
+    <p>items are centered in the cross-axis</p>
+    <div class="flex-container center">
+        <div class="flex-child size1">Box1</div>
+        <div class="flex-child size2">Box2</div>
+        <div class="flex-child size3">Box3</div>
+        <div class="flex-child size4">Box4</div>
+    </div>
+
+    <pre>.flex-container { align-items: baseline; }</pre>
+    <p>items are aligned such as their baselines align</p>
+    <div class="flex-container baseline">
+        <div class="flex-child size1">Box1</div>
+        <div class="flex-child size2">Box2</div>
+        <div class="flex-child size3">Box3</div>
+        <div class="flex-child size4">Box4</div>
+    </div>
+
+    <h1>Traditional Way</h1>
+    <pre>.trad-child { height: 100%; vertical-align: top }</pre>
+    <p>Specify a height value(100%) and vertical-align to child divs</p>
+    <div class="trad-container">
+        <div class="trad-child trad-height size1 trad-valign-top">Box1</div>
+        <div class="trad-child trad-height size2 trad-valign-top">Box2</div>
+        <div class="trad-child trad-height size3 trad-valign-top">Box3</div>
+        <div class="trad-child trad-height size4 trad-valign-top">Box4</div>
+    </div>
+
+    <pre>.trad-child { vertical-align: top; }</pre>
+    <div class="trad-container ">
+        <div class="trad-child trad-valign-top size1">Box1</div>
+        <div class="trad-child trad-valign-top size2">Box2</div>
+        <div class="trad-child trad-valign-top size3">Box3</div>
+        <div class="trad-child trad-valign-top size4">Box4</div>
+    </div>
+
+    <pre>.trad-child { vertical-align: bottom; } .trad-child { vertical-align: middle }</pre>
+    <div class="trad-container ">
+        <div class="trad-child trad-valign-bottom size1">Box1</div>
+        <div class="trad-child trad-valign-bottom size2">Box2</div>
+        <div class="trad-child trad-valign-bottom size3">Box3</div>
+        <div class="trad-child trad-valign-bottom size4">Box4</div>
+
+        <div class="trad-child trad-valign-middle size1">Box1</div>
+        <div class="trad-child trad-valign-middle size2">Box2</div>
+        <div class="trad-child trad-valign-middle size3">Box3</div>
+        <div class="trad-child trad-valign-middle size4">Box4</div>
+    </div>
+
+    <pre>.trad-child { position: relative; top: 100%; transform: translateY(-100%); vertical-align: top;    }</pre>
+    <div class="trad-container">
+        <div class="trad-child bottom size1 trad-valign-top">Box1</div>
+        <div class="trad-child bottom size2 trad-valign-top">Box2</div>
+        <div class="trad-child bottom size3 trad-valign-top">Box3</div>
+        <div class="trad-child bottom size4 trad-valign-top">Box4</div>
+    </div>
+
+    <pre>.trad-child { position: relative; top: 50%; transform: traslateY(-50%); vertical-align: top; }</pre>
+    <div class="trad-container">
+        <div class="trad-child middle size1 trad-valign-top">Box1</div>
+        <div class="trad-child middle size2 trad-valign-top">Box2</div>
+        <div class="trad-child middle size3 trad-valign-top">Box3</div>
+        <div class="trad-child middle size4 trad-valign-top">Box4</div>
+    </div>
+    <p>children boxes are align on font baseline</p>
+    <div class="trad-container">
+        <div class="trad-child size1">Box1</div><!--
+        --><div class="trad-child size2">Box2</div><!--
+        --><div class="trad-child size3">Box3</div><!--
+        --><div class="trad-child size4">Box4</div>
+    </div>
+</body>
+</html>

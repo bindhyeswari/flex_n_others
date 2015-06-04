@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Align-content</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+            flex-wrap: wrap;
+            height: 500px;
+            /*align-content: flex-start;*/
+            /*align-content: flex-end;*/
+            /*align-content: center;*/
+            align-content: space-between;
+            /*align-content: space-around;*/
+            /*align-content: stretch;*/
+        }
+        .flex-child {
+            width: 200px;
+            background-color: lightseagreen;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Align-content</h1>
+    <pre>.flex-container { align-content: flex-start; | flex-end | center | space-between | space-around | stretch }</pre>
+    <p>This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.</p>
+    <div class="flex-container">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+        <div class="flex-child">Box5</div>
+        <div class="flex-child">Box6</div>
+        <div class="flex-child">Box7</div>
+        <div class="flex-child">Box8</div>
+        <div class="flex-child">Box9</div>
+        <div class="flex-child">Box10</div>
+    </div>
+    <h1>Traditional Way</h1>
+</body>
+</html>
