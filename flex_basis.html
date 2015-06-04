@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Basis</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+            height: 100px;
+            width: 1000px;
+        }
+        .flex-child {
+            background-color: lightseagreen;
+            flex-basis: 1000px;
+        }
+
+        .trad-container {
+            border: 1px solid silver;
+            height: 100px;
+            width: 1000px;
+        }
+        .trad-child {
+            background-color: indianred;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Basis</h1>
+    <pre>.flex-container { display: flex; width:: 1000px; height: 100px; }
+.flex-child { flex-basis: 1000px; }</pre>
+    <p>This defines the default size of an element before the remaining space is distributed. The main-size value makes it match the width or height, depending on which is relevant based on the flex-direction.</p>
+    <div class="flex-container">
+        <div class="flex-child"></div>
+    </div>
+    <h1>Traditional Way</h1>
+    <pre>.trad-container { width: 1000px; height: 100px; }
+.trad-child { height: 100px; }</pre>
+    <p>Need to specify the container's child height</p>
+    <div class="trad-container">
+        <div class="trad-child"></div>
+    </div>
+</body>
+</html>

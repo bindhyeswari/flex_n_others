@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Align-self</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        h1:last-of-type { margin: 20px 0; }
+        .flex-container {
+            display: flex;
+            height: 100px;
+            border: 1px solid silver;
+        }
+        .flex-child {
+            background-color: lightseagreen;
+            width: 100px;
+            text-align: center;
+
+            align-self: auto;
+            /*align-self: flex-start;*/
+            /*align-self: flex-end;*/
+            /*align-self: center;*/
+            /*align-self: baseline;*/
+            /*align-self: stretch;*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Align-self</h1>
+    <pre>.flex-child { align-self: auto | flex-start | flex-end | center | baseline | stretch; }</pre>
+    <p>This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.<br />
+        Note that float, clear and vertical-align have no effect on a flex item.</p>
+    <div class="flex-container">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+</body>
+</html>

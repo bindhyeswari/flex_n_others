@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        h1:last-of-type { margin: 20px 0; }
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+            width: 1000px;
+            height: 100px;
+        }
+        .flex-child {
+            flex: 1 1 auto;
+            background-color: lightseagreen;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex</h1>
+    <pre>.flex-container { display: flex; width: 1000px; height: 100px; }
+.flex-child { flex: 1 1 auto; }</pre>
+    <p>This is the shorthand for <strong>flex-grow</strong>, <strong>flex-shrink</strong> and <strong>flex-basis</strong> combined. <br />
+        The second and third parameters (flex-shrink and flex-basis) are optional. <strong>Default is 0 1 auto</strong>.</p>
+    <div class="flex-container">
+        <div class="flex-child">Box1</div>
+        <div class="flex-child">Box2</div>
+        <div class="flex-child">Box3</div>
+        <div class="flex-child">Box4</div>
+    </div>
+</body>
+</html>

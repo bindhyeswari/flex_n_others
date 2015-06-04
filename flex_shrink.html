@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Shrink</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid silver;
+            height: 100px;
+            width: 1000px;
+        }
+        .flex-child {
+            width: 400px;
+            flex-shrink: 1;
+        }
+        .flex-shrink {
+            flex-shrink: 3;
+        }
+        .flex-child:nth-child(1),
+        .trad-child:nth-child(1) {
+            background-color:coral;
+        }
+        .flex-child:nth-child(2),
+        .trad-child:nth-child(2) {
+            background-color: antiquewhite;
+        }
+        .flex-child:nth-child(3),
+        .trad-child:nth-child(3) {
+            background-color: sienna;
+        }
+        .flex-child:nth-child(4),
+        .trad-child:nth-child(4) {
+            background-color: darkgreen;
+        }
+
+        .trad-container {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid silver;
+        }
+        .trad-child {
+            float: left;
+            display: inline-block;
+            width: 30%;
+            height: 100px;
+        }
+        .trad-child:nth-child(2) {
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Shrink</h1>
+    <pre>.flex-container { width: 1000px; }
+.flex-child { flex-shrink: 1; }
+.flex-child:nth-child(2) { flex-shrink: 3; }</pre>
+    <div class="flex-container">
+        <div class="flex-child"></div>
+        <div class="flex-child flex-shrink"></div>
+        <div class="flex-child"></div>
+        <div class="flex-child"></div>
+    </div>
+    <h1>Traditional Way</h1>
+    <pre>.trad-container { width: 1000px; height: 100px; }
+.trad-child { float: left; display: inline-block; width: 30%; heigth: 100px; }
+.trad-child:nth-child(2) { width: 10%; }</pre>
+    <div class="trad-container">
+        <div class="trad-child"></div>
+        <div class="trad-child"></div>
+        <div class="trad-child"></div>
+        <div class="trad-child"></div>
+    </div>
+</body>
+</html>
